@@ -14,7 +14,7 @@
 <article>
 <div class="row">
 <div class="jumbotron">
-	<h1 class="text-center">Enter to Learn and Exit to Earn</h1>
+	<h2 class="text-center">Enter to Learn and Exit to Earn</h2>
 	<p class="text-center">Our Expertise empower you to achieve your goals and achieve success. </p>
 <div class="row">
 

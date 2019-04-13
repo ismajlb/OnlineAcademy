@@ -16,13 +16,16 @@
 <article>
 	<div class="alert alert-danger">
 		<%
-			//String imageUrl = config.getInitParameter("imageUrl");
 			String imageUrl = config.getInitParameter("imageUrl");
 			String errorMessage = config.getInitParameter("errorMessage");
-			out.println("<center><img src='" + imageUrl + "' alt='" + errorMessage + "' width=150 height=150/>");
-			out.println("<h1>Oops!...<br>" + errorMessage + "</h1></center>");
+			out.println("<center><img src='" + imageUrl + "' alt='" + errorMessage + "'" + "</>");
+			out.println("<h1>Oops!..." + errorMessage + "</h1></center>");
 		%>
+	
+	
 	</div>
+
+
 </article>
 <!-- Footer Section -->
 <footer>

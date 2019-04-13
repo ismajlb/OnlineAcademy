@@ -15,5 +15,5 @@ crossorigin="anonymous"></script>
 
 <hgroup>
 <h1>LearnToday</h1>
-<h3>The best investment you can make is in yourself</h3>
+<h3>The best investment you can make is in yourself.</h3>
 </hgroup>

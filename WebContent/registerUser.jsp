@@ -6,7 +6,7 @@
 
 	private boolean createUser(String userName, String password){
 		try{
-			String sql = "insert into users values (?,?)";
+			String sql = "insert into user values (?,?)";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, userName);
 			ps.setString(2, password);
@@ -28,8 +28,8 @@
 	
 	String driverClass = application.getInitParameter("dbDriver");
 	String url = application.getInitParameter("dbUrl");
-	String dbUserName = application.getInitParameter("root");
-	String dbPassword = application.getInitParameter("");
+	String dbUserName = application.getInitParameter("dbUser");
+	String dbPassword = application.getInitParameter("dbPwd");
 	
 	try{
 		Class.forName(driverClass);

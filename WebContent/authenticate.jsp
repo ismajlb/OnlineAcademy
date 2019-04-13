@@ -6,7 +6,7 @@
 
 	private boolean isValidUser(String userName, String password){
 		try{
-			String sql = "select * from users where username=? and passwd=?";
+			String sql = "select * from user where username=? and passwd=?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, userName);
 			ps.setString(2, password);
@@ -46,6 +46,11 @@
 	
 	if(authFlag){
 		session.setAttribute("user", userName);
+		String rurl = request.getParameter("requestUrl");
+		if(rurl != null && !rurl.equals("null"))			
+		{
+			response.sendRedirect(rurl + ".jsp");
+		}
 		response.sendRedirect("courses.jsp");
 	}
 	else{

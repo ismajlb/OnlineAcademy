@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registration Form - LearnToday</title>
+<title>Registration Form</title>
 </head>
 <body>
 <div class="container">
@@ -31,7 +31,7 @@
 		<input type="password" class="form-control" name="password" required="required" />
 	</div>
 </div>
-<%@ include file="DbConnect.jsp" %>
+
 <div class="form-group">
 	<div class="col-md-4 col-md-offset-2">
 		<input type="submit" name="btnRegister" value="Register" class="btn btn-primary" />
