@@ -54,12 +54,6 @@
 			</jsp:scriptlet>
 			
 			<jsp:forward page="viewCourse.jsp"></jsp:forward>
-		
-	
-	
-	
-	
-
 
 </body>
 </html>
