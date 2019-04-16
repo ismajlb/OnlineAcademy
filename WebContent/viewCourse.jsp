@@ -21,27 +21,24 @@
 </b>
 
 <jsp:useBean id="course" class="com.academy.model.Course" scope="request"/>
-
-   
-   <div class="panel panel-primary">
+	<div class="panel panel-primary">
    	<p class="panel-heading">Course Details </p>
+   		<div class="panel-body">
    	
-   	<div class="panel-body">
-   	
-   		<div class="media">
-  			<div class="media-left">
-    			<a href="#"><img class="media-object" src="${course.imageUrl}" alt="${course.courseName}"></a>
-  			</div>
-  			<div class="media-body">
-  		  		<h4 class="media-heading">${course.courseName}</h4>
-		   		<p><strong>Trainer Name : </strong> ${course.facultyName} </p>
-		   		<p><strong>Course Description : </strong> <br/> ${course.description} </p>
-		   		<p><strong>Course Fee : </strong> ${course.fees} </p>
-  			</div>
-	</div>
+   			<div class="media">
+  				<div class="media-left">
+    				<a href="#"><img class="media-object" src="${course.imageUrl}" alt="${course.courseName}"></a>
+  				</div>
+  				<div class="media-body">
+  		  			<h4 class="media-heading">${course.courseName}</h4>
+		   			<p><strong>Trainer Name : </strong> ${course.facultyName} </p>
+		   			<p><strong>Course Description : </strong> <br/> ${course.description} </p>
+		   			<p><strong>Course Fee : </strong> ${course.fees} </p>
+  				</div>
+			</div>
    				
-   		<p class="text-center"><a href="Courses.jsp" class="btn btn-lg btn-success">View All Courses</a> </p>
-   	</div>
+   			<p class="text-center"><a href="Courses.jsp" class="btn btn-lg btn-success">View All Courses</a> </p>
+   		</div>
    </div>
  </article>
  

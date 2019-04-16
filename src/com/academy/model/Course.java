@@ -1,6 +1,12 @@
 package com.academy.model;
 
 import java.io.Serializable;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.*;
 
 public class Course implements Serializable{
 	
@@ -56,6 +62,35 @@ public class Course implements Serializable{
 		this.ratings = ratings;
 	}
 	
+	public static List getCourses()
+	{
+		ArrayList courses;
+		courses = new ArrayList();
+		try
+		{
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users", "root", "");
+			Statement stmt = con.createStatement();
+			String qry = "Select * from course";
+			ResultSet rs = stmt.executeQuery(qry);
+			while(rs.next())
+			{
+				Course course = new Course();
+				course.setCourseName(rs.getString("courseTitle"));
+				course.setFacultyName(rs.getString("trainer"));
+				course.setImageUrl(rs.getString("imageUrl"));
+				course.setFees(rs.getInt("fees"));
+				course.setDescription(rs.getString("courseDescription"));
+				courses.addAll(courses);		
+			}		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return courses;
+	}
 	
 
 }
